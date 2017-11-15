@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Halite Junior</title>
+    <link rel = "stylesheet" type = "text/css" href = "style_level1.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body background="assets/spacebg.png">
+<div id="container">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id = "nav_options_all">
+            <div class = "dividing_line"></div>
+            <div class = "options_group">
+                <div href="#"><a href="#" class="link" id="button1">
+                    <img src="assets/if_blank.png" onmouseover="this.src='assets/if_selected.png'" onmouseout="this.src='assets/if_blank.png'" alt="if_blank" style="margin-left:-10px;height:60px"></a>
+                    <div class="popup" tabindex="-1">
+                        <div href="#"  onclick="addImg5()" style="float:left"><img src="assets/if_heart01.png" style="height:40px;margin-left:30px"></div>
+                        <div href="#"  onclick="addImg()" style="float:left"><img src="assets/if_heart02.png" style="height:40px;margin-left:30px"></div>
+                        <div href="#"  onclick="addImg6()" style="float:left"><img src="assets/if_shield01.png" style="height:40px;margin-left:30px"></div>
+                        <div href="#"  onclick="addImg1()" style="float:left"><img src="assets/if_shield02.png" style="height:40px;margin-left:30px"></div>
+                        <div href="#"  onclick="addImg7()" style="float:left"><img src="assets/if_gem01.png" style="height:40px;margin-left:30px"></div>
+                        <div href="#"  onclick="addImg2()" style="float:left"><img src="assets/if_gem02.png" style="height:40px;margin-left:30px"></div>
+                        <a class="close" href="#">Close</a>
+                    </div>
+                </div>
+                <div href="#"><img src="assets/line_white.png" alt="line_white" style="margin-left:15px;margin-top:30px;height:10px"></div>
+                <div href="#"><a href="#" class="link1" id="button2">
+                    <img src="assets/goplanet_white.png" onmouseover="this.src='assets/goplanet_selected.png'" onmouseout="this.src='assets/goplanet_white.png'" alt="goplanet_white" style="margin-left:20px;margin-top:-15px;height:100px"></a>
+                    <div class="popup1" tabindex="-1">
+                        <div href="#"  onclick="addImg4()" style="float:left"><img src="assets/planet-lava.png" style='height:100px;margin-left:30px'></div>
+                        <div href="#"  onclick="addImg3()" style="float:left"><img src="assets/planet-moon.png" style='height:100px;margin-left:30px'></div>
+                        <a class="close1" href="#">Close</a></div>
+                </div>
+
+            </div>
+
+            <div class = "options_group">
+
+                <div href="#"><a href="#" id="button3"><img src="assets/if_black.png" alt="if_blank" style="margin-left:-10px;margin-top:20px;height:60px"></a></div>
+                <div href="#"><img src="assets/line_black.png" alt="line_white" style="margin-left:15px;margin-top:50px;height:10px"></div>
+
+                <div href="#"><a href="#" class="link2" id="button4">
+                    <img src="assets/goplanet_black.png" alt="goplanet_white" style="margin-left:20px;margin-top:5px;height:100px"></a></div>
+                <div class="popup2" tabindex="-1">
+                    <div href="#"  onclick="addImg9()" style="float:left"><img src="assets/planet-lava.png" style='height:100px;margin-left:30px'></div>
+                    <div href="#"  onclick="addImg8()" style="float:left"><img src="assets/planet-moon.png" style='height:100px;margin-left:30px'></div>
+                    <a class="close2" href="#">Close</a></div>
+            </div>
+            <a href="#" id="rere" onclick="rere()" style="margin-left: 300px">OK</a>
+
+        </div>
+    </div>
+    <div class = "open_nav_bar" onclick="openNav()"><img src="assets/setting_icon01.png" alt="Nav"></div>
+
+    <h1><img src="assets/halitejr.png" style="height:40px"></h1>
+    <div id="modes">
+        <div class="mode" id="practice" style="margin-right:37px">PRACTICE FIELD</div>
+        <div class="mode" id="combat">COMBAT</div>
+        <div class="mode" id="campaign">PILOT MISSIONS</div>
+    </div>
+    <div id="line" style="margin-top: 12vh; margin-bottom: 0 ; margin-left: 5vw; margin-right: 3vw; border-top: 1px solid #FFD800"></div>
+    <div id="status">
+
+        <div id="life-engine" style="width: 100px; float:left">
+            <div id="shipname"><img src="level1/shipname.png" style="margin-left: 5vw; margin-top: 1vw"></div>
+            <div id="life"><img src="level1/life3.png" alt="Life" style="margin-left:5vw; margin-top: 1vw"></div>
+        </div>
+
+
+        <div id="upgrade-icon"></div>
+
+        <div class="text" id="mission" style="margin-right:50px;float:right">MISSION 001</div>
+
+    </div>
+
+    <div id="ships">
+        <div id="ship">
+            <img src="assets/ship01.png" onclick="myMove()" id = "mother_ship" class = "ball" alt="Ship">
+        </div>
+    </div>
+
+
+
+    <div id="planets">
+        <img id="planet1" src="level1/planet1heart.png" style="margin-left:20px; margin-bottom:340px">
+        <img id="planet2" src="level1/planet2heart.png" style="margin-left:80px; margin-bottom:30px">
+        <img id="planet3" src="level1/planet3heart.png" style="margin-left:100px; margin-bottom:260px">
+    </div>
+</div>
+
+<div id="task-box">
+    <img id = "task" src="level1/mission1-task.png" onclick="beginMission()">
+</div>
+
+<div id="ending" onclick="reload()">
+
+</div>
+<script src="script_level1.js"></script>
+
+</body>
+</html>
