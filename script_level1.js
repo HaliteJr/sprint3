@@ -5,6 +5,7 @@ function openNav() {
     document.getElementById("popup6").style.display = "inline";
     document.getElementById("instruction2").style.display = "inline";
     document.getElementById("nav").style.width = "0";
+    document.getElementById("hover").style.display="none";
 }
 
 /* Close/hide the sidenav */
@@ -12,6 +13,7 @@ function closeNav() {
     document.getElementById("popup6").style.display = "none";
     document.getElementById("instruction2").style.display = "none";
     document.getElementById("nav").style.width = "100%";
+    document.getElementById("hover").style.display="inline";
 }
 
 

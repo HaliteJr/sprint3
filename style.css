@@ -336,3 +336,105 @@ H1:hover{
         transform: translateY(-18px);
     }
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -100px;
+    left: 0px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#popup6{
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(209,211,212);
+    margin-left:0px;
+    display: none;
+}
+
+#div4,#div5,#div6{
+    padding: 0px;
+    border-radius: 90px;
+    display: inline-block;
+    border-color: black;
+    height:90px;
+    width:90px;
+    margin-left:30px; margin-top:0px;
+    position:absolute;
+
+}
+
+#div1{
+
+    padding: 0px;
+    border-radius: 90px;
+    display: inline-block;
+    border-color: black;
+    background-size: 100% 100%;
+    background-image: url("level1/1.png");
+    height:90px;
+    width:90px;
+    margin-top:10px;
+    /*position:absolute;*/
+}
+
+#div2{
+
+    padding: 0px;
+    border-radius: 90px;
+    display: inline-block;
+    border-color: black;
+    background-size: 100% 100%;
+    background-image: url("level1/2.png");
+    height:90px;
+    width:90px;
+    /*position:absolute;*/
+    margin-top:10px;
+}
+
+#div3{
+
+    padding: 0px;
+    border-radius: 90px;
+    display: inline-block;
+    border-color: black;
+    background-size: 100% 100%;
+    background-image: url("level1/3.png");
+    height:90px;
+    width:90px;
+
+    /*position:absolute;*/
+    margin-top:10px;
+}
+
+
+/*level2 new stuff*/
+
+#task-box {
+    background-color: #E6E7E8;
+    margin-left: 450px;
+    height: 470px;
+    width: 500px;
+    position:absolute;
+    z-index: 1;
+    border-radius: 30px;
+    bottom:15vh;
+}

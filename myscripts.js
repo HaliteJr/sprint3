@@ -1,15 +1,4 @@
-
-
-/* Open the sidenav */
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-
-/* Close/hide the sidenav */
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-
+//level 2 new function added at the end
 
 function ending() {
     $('#ending').show();
@@ -535,3 +524,35 @@ $('.close2').click(function() {
 $(".popup2").on('blur',function(){
     $(this).fadeOut(300);
 });
+
+
+// added for level 2
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+/* Open the sidenav */
+function openNav() {
+    document.getElementById("popup6").style.display = "inline";
+    document.getElementById("instruction2").style.display = "inline";
+    document.getElementById("nav").style.width = "0";
+    document.getElementById("hover").style.display="none";
+}
+
+/* Close/hide the sidenav */
+function closeNav() {
+    document.getElementById("popup6").style.display = "none";
+    document.getElementById("instruction2").style.display = "none";
+    document.getElementById("nav").style.width = "100%";
+    document.getElementById("hover").style.display = "inline";
+}
