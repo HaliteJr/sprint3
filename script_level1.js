@@ -2,12 +2,16 @@
 
 /* Open the sidenav */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("popup6").style.display = "inline";
+    document.getElementById("instruction2").style.display = "inline";
+    document.getElementById("nav").style.width = "0";
 }
 
 /* Close/hide the sidenav */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("popup6").style.display = "none";
+    document.getElementById("instruction2").style.display = "none";
+    document.getElementById("nav").style.width = "100%";
 }
 
 
@@ -429,11 +433,7 @@ function checkTime(i) {
 
 function rere(){
     closeNav();
-    if (shieldChosen) {
-        goingRedtoBlueFail();
-    } else {
-        goingRedtoBlue();
-    }
+    goingRedtoBlue();
 }
 
 
