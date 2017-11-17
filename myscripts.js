@@ -32,7 +32,7 @@ var wingman = document.getElementById("baby_ship");
     var leftPos = 80;
     var wingman_leftPos = 60;
     var wingman_topPos = 380;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 5);
 
     function frame() {
         if (leftPos == 600) {
@@ -65,7 +65,7 @@ var wingman = document.getElementById("baby_ship");
        var wingman_leftPos = 788;
        var wingman_topPos = 276;
 
-       var id = setInterval(frame, 10);
+       var id = setInterval(frame, 5);
 
        function frame() {
            if (wingman_leftPos == 680) {
@@ -93,7 +93,7 @@ var wingman = document.getElementById("baby_ship");
         var wingman_leftPos = 680;
         var wingman_topPos = 384;
 
-        var id = setInterval(frame, 10);
+        var id = setInterval(frame, 5);
 
         function frame() {
             if (leftPos == 1060) {
@@ -140,7 +140,7 @@ var wingman = document.getElementById("baby_ship");
     var leftPos = 80;
     var wingman_leftPos = 60;
     var wingman_topPos = 380;
-    var id = setInterval(frame, 10);
+    var id = setInterval(frame, 5);
 
     function frame() {
         if (leftPos == 600) {
@@ -173,7 +173,7 @@ var wingman = document.getElementById("baby_ship");
        var wingman_leftPos = 788;
        var wingman_topPos = 276;
 
-       var id = setInterval(frame, 10);
+       var id = setInterval(frame, 5);
 
        function frame() {
            if (wingman_leftPos == 680) {
@@ -201,7 +201,7 @@ var wingman = document.getElementById("baby_ship");
         var wingman_leftPos = 680;
         var wingman_topPos = 384;
 
-        var id = setInterval(frame, 10);
+        var id = setInterval(frame, 5);
 
         function frame() {
             if (leftPos == 900) {
@@ -245,7 +245,7 @@ var wingman = document.getElementById("baby_ship");
         var wingman_topPos = 594;
         var wingman_leftPos = 1010;
 
-        var id = setInterval(frame, 10);
+        var id = setInterval(frame, 5);
         function frame() {
             if (leftPos == 1070) {
                 clearInterval(id);
