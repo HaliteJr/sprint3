@@ -183,7 +183,7 @@ function goingRedtoBlue(){
         if (shieldChosen) {
             updateLife(5);
         } else {
-            updateLife(10);}
+            updateLife(3);}
     }, 5900);
 
 
@@ -296,11 +296,8 @@ function goingRedtoBlue(){
 
     setTimeout(function(){
         wingman.style.backgroundImage = "url('assets/drill_2.png')";
-        if (shieldChosen) {
-            updateLife(5);
-        } else {
-            updateLife(10);
-        }
+        updateLife(3);
+
     }, 18500);
 
     setTimeout(function(){
@@ -360,11 +357,11 @@ var start = new Date();
 var startsec = start.getHours()*3600+start.getMinutes()*60+start.getSeconds();
 
 var score = 0;
-var life = 12;
-var energy = 12;
+var life = 6;
+// var energy = 12;
 
-var shieldChosen = false;
-var drillChosen = false;
+// var shieldChosen = false;
+// var drillChosen = false;
 
 function beginMission() {
     $("#task-box").hide();
@@ -412,7 +409,7 @@ function updateLife(n) {
     if (life < 0) {
         life = 0;
     }
-    document.getElementById('life').innerHTML = '<img src="assets/heart_bar' + life + '.png" alt="Life" style="margin-left:5vw">';
+    document.getElementById('life').innerHTML = '<img src="level1/life' + life + '.png" alt="Life" style="margin-left:5vw">';
 }
 
 function startTime() {

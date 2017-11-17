@@ -7,10 +7,25 @@ body {
 }
 
 #planet1{
-    margin-left:20px; 
-    margin-bottom:340px; 
+
+    margin-bottom: 300px;
+    margin-right: 40px;
+    height:120px;
+
+}
+
+#planet2{
+    margin-right:30px;
+    margin-bottom: 0px;
     height:120px
 }
+
+#planet3{
+    margin-right:0px;
+    margin-bottom:200px;
+    height:120px
+}
+
 #shipname_image{
     width: 150px;
 }
@@ -214,8 +229,8 @@ H1:hover{
 
 #planets {
     float: right;
-    margin-top: 5vh;
-    margin-right: 5vh;
+    margin-top: 0;
+    margin-right: 0;
 }
 
 .text {
@@ -326,14 +341,12 @@ H1:hover{
 
 .ball1 {
 
-    background-image: url("assets/wingman01.png");
+    background-image: url("assets/ship01.png");
     background-size: 100% 100%;
     top: 380px;
     left: 60px;
-    height: 45px;
-    width: 70px;
- 
-
+    height: 42px;
+    width: 90.7px;
 
     animation: bounce 0.6s infinite alternate;
     -webkit-animation: bounce 0.6s infinite alternate;
@@ -357,6 +370,9 @@ H1:hover{
     }
 }
 
+
+/*level2 new stuff*/
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -375,9 +391,9 @@ H1:hover{
     left: 0px;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
+/*.tooltip:hover .tooltiptext {*/
+    /*visibility: visible;*/
+/*}*/
 
 #popup6{
     height: 150px;
@@ -446,10 +462,21 @@ H1:hover{
 }
 
 
-/*level2 new stuff*/
+
 
 #task-box {
     background-color: #E6E7E8;
+    margin-left: 450px;
+    height: 470px;
+    width: 500px;
+    position:absolute;
+    z-index: 1;
+    border-radius: 30px;
+    bottom:15vh;
+}
+
+#warning-box {
+    display: none;
     margin-left: 450px;
     height: 470px;
     width: 500px;

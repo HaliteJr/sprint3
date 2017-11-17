@@ -48,18 +48,15 @@ var wingman = document.getElementById("baby_ship");
     }
 
 
-   setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/drill_2.png')";
-    if (shieldChosen) {
-        updateLife(5);
-    } else {
-        updateLife(10);}
-    }, 5900);
+   setTimeout(function(){
+       toScan(wingman);
+       updateLife(3);
+   }, 5900);
 
 
    setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/wingman01_reverse.png')";
-    }, 7400);
+       toFlip(wingman);
+   }, 7400);
 
 
 
@@ -82,14 +79,11 @@ var wingman = document.getElementById("baby_ship");
            }
        }
 
-       if (drillChosen) {
-           updateLife(-5);
-       }
    }, 8000);
 
     setTimeout(function(){ 
-        wingman.style.backgroundImage = "url('assets/wingman01.png')";
-        }, 8600);
+        toNormal(wingman);
+    }, 8600);
 
 
     setTimeout(function() {
@@ -123,16 +117,15 @@ var wingman = document.getElementById("baby_ship");
 
 
     setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/drill_2.png')";
+        toScan(wingman);
+        updateLife(3);
     }, 14000);
 
 
-   setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/wingman01.png')";
-   if (drillChosen) {
-       updateLife(-5);
-   }
-    }, 15000);
+   setTimeout(function(){
+       toNormal(wingman);
+
+   }, 15000);
 
 }
 
@@ -163,17 +156,14 @@ var wingman = document.getElementById("baby_ship");
     }
 
 
-   setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/drill_2.png')";
-    if (shieldChosen) {
-        updateLife(5);
-    } else {
-        updateLife(10);}
+   setTimeout(function(){
+       toScan(wingman);
+       updateLife(3);
     }, 5900);
 
 
    setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/wingman01_reverse.png')";
+       toFlip(wingman);
     }, 7400);
 
 
@@ -197,13 +187,10 @@ var wingman = document.getElementById("baby_ship");
            }
        }
 
-       if (drillChosen) {
-           updateLife(-5);
-       }
    }, 8000);
 
     setTimeout(function(){ 
-        wingman.style.backgroundImage = "url('assets/wingman01.png')";
+        toNormal(wingman);
         }, 8600);
 
 
@@ -238,16 +225,17 @@ var wingman = document.getElementById("baby_ship");
 
 
     setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/drill_2.png')";
+        toScan(wingman);
+        updateLife(-1);
     }, 13000);
 
 
-   setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/wingman01.png')";
-   if (drillChosen) {
-       updateLife(-5);
-   }
-    }, 14500);
+   setTimeout(function(){
+       toNormal(wingman);
+       if (drillChosen) {
+           updateLife(-5);
+       }
+   }, 14500);
 
 
     setTimeout(function(){
@@ -280,20 +268,13 @@ var wingman = document.getElementById("baby_ship");
 
 
     setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/drill_2.png')";
-    if (shieldChosen) {
-        updateLife(5);
-    } else {
-        updateLife(10);
-    }
+        toScan(wingman);
+        updateLife(3);
     }, 18500);
 
     setTimeout(function(){ 
-    wingman.style.backgroundImage = "url('assets/wingman01.png')";
-    if (drillChosen) {
-        updateLife(-5);
-    }
-    ending();
+        toNormal(wingman);
+        ending();
     }, 20000);
 
 
@@ -345,7 +326,7 @@ var start = new Date();
 var startsec = start.getHours()*3600+start.getMinutes()*60+start.getSeconds();
 
 var score = 0;
-var life = 12;
+var life = 6;
 var energy = 12;
 
 var shieldChosen = false;
@@ -405,7 +386,7 @@ function updateLife(n) {
     if (life < 0) {
         life = 0;
     }
-    document.getElementById('life').innerHTML = '<img src="assets/heart_bar' + life + '.png" alt="Life" style="margin-left:5vw">';
+    document.getElementById('life').innerHTML = '<img src="level1/life' + life + '.png" alt="Life" id = "health_bar_image" style="margin-left:5vw; margin-top: 1vw">';
 }
 
 function startTime() {
@@ -428,13 +409,14 @@ return i;
 
 function rere(){
     closeNav();
-   //goingRedtoBlue();
-    // goingRedtoBlueFail();
-    if (shieldChosen) {
-        goingRedtoBlueFail();
-    } else {
+    document.getElementById("hover").style.display="none";
+
+    if ($('#div1').find('#drag1').length && $('#div2').find('#drag2').length && $('#div3').find('#drag3').length) {
         goingRedtoBlue();
+    } else {
+        goingRedtoBlueFail();
     }
+
 }
 
 
@@ -559,4 +541,34 @@ function closeNav() {
     document.getElementById("instruction2").style.display = "none";
     document.getElementById("nav").style.width = "100%";
     document.getElementById("hover").style.display = "inline";
+}
+
+function toScan(wingman) {
+    wingman.style.backgroundImage = "url('level1/ship-scan.png')";
+    wingman.style.height = "68.7px";
+    wingman.style.width = "136.7px";
+}
+
+function toFlip(wingman) {
+    wingman.style.backgroundImage = "url('level1/ship-flip.png')";
+    wingman.style.height = "42px";
+    wingman.style.width = "90.7px";
+}
+
+function toNormal(wingman) {
+    wingman.style.backgroundImage = "url('assets/ship01.png')";
+    wingman.style.height = "42px";
+    wingman.style.width = "90.7px";
+}
+
+function beginMission() {
+    $("#task-box").hide();
+    setTimeout(function(){
+        document.getElementById("warning-box").style.display = "inline";
+    }, 800);
+}
+
+function hideWarning() {
+    document.getElementById("warning-box").style.display = "none";
+    document.getElementById("hover").style.visibility = "visible";
 }
