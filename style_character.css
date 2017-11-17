@@ -91,3 +91,39 @@ H1:hover{
     margin: 0 auto;
     display: block;
 }
+
+#ring1 {
+    display: none;
+    position: absolute;
+    left: 145px;
+    top: 300px;
+}
+
+#ring2 {
+    display: none;
+    position: absolute;
+    left: 490px;
+    top: 300px;
+}
+
+#ring3 {
+    display: none;
+    position: absolute;
+    left: 830px;
+    top: 300px;
+}
+
+#ring4 {
+    display: none;
+    position: absolute;
+    left: 1175px;
+    top: 300px;
+}
+
+input[type='text'] {
+    font-size: 1.0em;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+    border: solid;
+    border-color: white;
+}

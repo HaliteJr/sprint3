@@ -2,11 +2,16 @@
 
 function ending() {
     $('#ending').show();
-    if (shieldChosen) {
-        document.getElementById('ending').innerHTML = '<img style="height:530px;margin-left: 430px;" src="assets/mission-over.png">'
-    } else if (drillChosen) {
-        document.getElementById('ending').innerHTML = '<img style="height:530px;margin-left: 430px;" src="assets/mission-completed.png">'
-    }
+    document.getElementById('ending').innerHTML = '<img src="level1/mission1-win.png" onclick="upgrade_popup()">';
+}
+
+function upgrade_popup() {
+    document.getElementById('ending').innerHTML = '<img src="level1/upgrade_popup.png" style="width: 509px;" onclick="reload()">';
+}
+
+function endingFail() {
+    $('#ending').show();
+    document.getElementById('ending').innerHTML = '<img src="level1/mission1-over.png" onclick="reload()">';
 }
 
 function reload() {
@@ -24,9 +29,9 @@ function goingBlueFirst(){
 
 
 function goingRedtoBlueFail(){
-    
-var elem = document.getElementById("mother_ship"); 
-var wingman = document.getElementById("baby_ship");
+
+    var elem = document.getElementById("mother_ship");
+    var wingman = document.getElementById("baby_ship");
 
 
     var leftPos = 80;
@@ -38,52 +43,52 @@ var wingman = document.getElementById("baby_ship");
         if (leftPos == 600) {
             clearInterval(id);
         } else {
-            leftPos++; 
+            leftPos++;
             wingman_topPos = wingman_topPos -0.2;
             wingman_leftPos = 1.4 + wingman_leftPos;
             wingman.style.left = wingman_leftPos + 'px';
-            elem.style.left = leftPos + 'px'; 
+            elem.style.left = leftPos + 'px';
             wingman.style.top = wingman_topPos + 'px';
         }
     }
 
 
-   setTimeout(function(){
-       toScan(wingman);
-       updateLife(3);
-   }, 5900);
+    setTimeout(function(){
+        toScan(wingman);
+        updateLife(3);
+    }, 3500);
 
 
-   setTimeout(function(){ 
-       toFlip(wingman);
-   }, 7400);
+    setTimeout(function(){
+        toFlip(wingman);
+    }, 4500);
 
 
 
-   setTimeout(function() {
+    setTimeout(function() {
 
-       var wingman_leftPos = 788;
-       var wingman_topPos = 276;
+        var wingman_leftPos = 788;
+        var wingman_topPos = 276;
 
-       var id = setInterval(frame, 5);
+        var id = setInterval(frame, 5);
 
-       function frame() {
-           if (wingman_leftPos == 680) {
-               clearInterval(id);
-           } else {
-               wingman_topPos = wingman_topPos + 1;
-               wingman_leftPos = wingman_leftPos - 1;
+        function frame() {
+            if (wingman_leftPos == 680) {
+                clearInterval(id);
+            } else {
+                wingman_topPos = wingman_topPos + 1;
+                wingman_leftPos = wingman_leftPos - 1;
 
-               wingman.style.left = wingman_leftPos + 'px';
-               wingman.style.top = wingman_topPos + 'px';
-           }
-       }
+                wingman.style.left = wingman_leftPos + 'px';
+                wingman.style.top = wingman_topPos + 'px';
+            }
+        }
 
-   }, 8000);
+    }, 5000);
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toNormal(wingman);
-    }, 8600);
+    }, 7000);
 
 
     setTimeout(function() {
@@ -116,25 +121,26 @@ var wingman = document.getElementById("baby_ship");
 
 
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toScan(wingman);
         updateLife(3);
+    }, 12000);
+
+
+//
+    setTimeout(function(){
+        toNormal(wingman);
+        endingFail();
     }, 14000);
-
-
-   setTimeout(function(){
-       toNormal(wingman);
-
-   }, 15000);
 
 }
 
 
 
 function goingRedtoBlue(){
-	
-var elem = document.getElementById("mother_ship"); 
-var wingman = document.getElementById("baby_ship");
+
+    var elem = document.getElementById("mother_ship");
+    var wingman = document.getElementById("baby_ship");
 
 
     var leftPos = 80;
@@ -146,52 +152,52 @@ var wingman = document.getElementById("baby_ship");
         if (leftPos == 600) {
             clearInterval(id);
         } else {
-            leftPos++; 
+            leftPos++;
             wingman_topPos = wingman_topPos -0.2;
             wingman_leftPos = 1.4 + wingman_leftPos;
             wingman.style.left = wingman_leftPos + 'px';
-            elem.style.left = leftPos + 'px'; 
+            elem.style.left = leftPos + 'px';
             wingman.style.top = wingman_topPos + 'px';
         }
     }
 
 
-   setTimeout(function(){
-       toScan(wingman);
-       updateLife(3);
-    }, 5900);
+    setTimeout(function(){
+        toScan(wingman);
+        updateLife(3);
+    }, 3500);
 
 
-   setTimeout(function(){ 
-       toFlip(wingman);
-    }, 7400);
+    setTimeout(function(){
+        toFlip(wingman);
+    }, 4500);
 
 
 
-   setTimeout(function() {
+    setTimeout(function() {
 
-       var wingman_leftPos = 788;
-       var wingman_topPos = 276;
+        var wingman_leftPos = 788;
+        var wingman_topPos = 276;
 
-       var id = setInterval(frame, 5);
+        var id = setInterval(frame, 5);
 
-       function frame() {
-           if (wingman_leftPos == 680) {
-               clearInterval(id);
-           } else {
-               wingman_topPos = wingman_topPos + 1;
-               wingman_leftPos = wingman_leftPos - 1;
+        function frame() {
+            if (wingman_leftPos == 680) {
+                clearInterval(id);
+            } else {
+                wingman_topPos = wingman_topPos + 1;
+                wingman_leftPos = wingman_leftPos - 1;
 
-               wingman.style.left = wingman_leftPos + 'px';
-               wingman.style.top = wingman_topPos + 'px';
-           }
-       }
+                wingman.style.left = wingman_leftPos + 'px';
+                wingman.style.top = wingman_topPos + 'px';
+            }
+        }
 
-   }, 8000);
+    }, 6000);
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toNormal(wingman);
-        }, 8600);
+    }, 6500);
 
 
     setTimeout(function() {
@@ -220,22 +226,22 @@ var wingman = document.getElementById("baby_ship");
                 wingman.style.left = wingman_leftPos + 'px';
             }
         }
-    }, 9000);
+    }, 8000);
 
 
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toScan(wingman);
         updateLife(-1);
-    }, 13000);
+    }, 10500);
 
 
-   setTimeout(function(){
-       toNormal(wingman);
-       if (drillChosen) {
-           updateLife(-5);
-       }
-   }, 14500);
+    setTimeout(function(){
+        toNormal(wingman);
+        if (drillChosen) {
+            updateLife(-5);
+        }
+    }, 12000);
 
 
     setTimeout(function(){
@@ -250,32 +256,32 @@ var wingman = document.getElementById("baby_ship");
             if (leftPos == 1070) {
                 clearInterval(id);
             } else {
-                leftPos++; 
+                leftPos++;
                 topPos = topPos - 1.3;
 
                 wingman_leftPos++;
                 wingman_topPos = wingman_topPos - 1.3;
 
-                // elem.style.top = topPos + 'px'; 
-                // elem.style.left = leftPos + 'px'; 
+                // elem.style.top = topPos + 'px';
+                // elem.style.left = leftPos + 'px';
 
                 wingman.style.top = wingman_topPos + 'px';
                 wingman.style.left = wingman_leftPos + 'px';
             }
-        }    
+        }
 
-    }, 16000);
+    }, 13500);
 
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toScan(wingman);
         updateLife(3);
-    }, 18500);
+    }, 15000);
 
-    setTimeout(function(){ 
+    setTimeout(function(){
         toNormal(wingman);
         ending();
-    }, 20000);
+    }, 17000);
 
 
 }
