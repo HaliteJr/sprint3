@@ -5,11 +5,31 @@ body {
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
 }
+
+#planet1{
+    margin-left:20px; 
+    margin-bottom:340px; 
+    height:120px
+}
+#shipname_image{
+    width: 150px;
+}
+div#shipname {
+    margin-bottom: 10px;
+}
+
+#health_bar_image{
+    width: 150px;
+}
 #ending {
     display: none;
     position: absolute;
     /*margin-top: 10px;*/
     bottom: 15vh;
+}
+
+img#mother_ship {
+    display: none;
 }
 
 #ending:hover{
