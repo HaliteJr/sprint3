@@ -2,11 +2,11 @@
 
 function ending() {
     $('#ending').show();
-    document.getElementById('ending').innerHTML = '<img src="level1/mission1-win.png" onclick="upgrade_popup()">';
+    document.getElementById('ending').innerHTML = '<a href="new_mission.html"><img src="level1/mission1-win.png"></a>';
 }
 
 function upgrade_popup() {
-    document.getElementById('ending').innerHTML = '<img src="level1/upgrade_popup.png" style="width: 509px;" onclick="reload()">';
+    document.getElementById('ending').innerHTML = '<a href="new_mission.html"><img src="level1/upgrade_popup.png" style="width: 509px;"></a>';
 }
 
 function endingFail() {
